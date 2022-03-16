@@ -1,0 +1,21 @@
+article {
+  border: 5px solid;
+  padding: 1vw;
+  margin: 1vw;
+  width: 500px;
+}
+
+article img {
+  width: 250px;
+}
+
+.greeting-message {
+  font-size: 25px;
+  color: blueviolet;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.alert-button {
+  margin: .2rem 5vw;
+}
+
