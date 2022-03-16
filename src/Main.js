@@ -1,20 +1,28 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
+import './Main.css';
 
 class Main extends React.Component {
   render() {
+    let beasts = [];
+    this.props.data.forEach((beast, index) => {
+      beasts.push(
+        <HornedBeast
+          image_url={beast.image_url}
+          title={beast.title}
+          description={beast.description}
+          keyword={beast.keyword}
+          horns={beast.horns}
+          // need to add a key and index (line 7)
+          key={index}
+        />
+      )
+    });
+
+
     return (
       <main>
-        <HornedBeast
-          title="Narwhal"
-          imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWrH0HChS-BMo1KDepIZMTrgktG8LNq15hsQ&usqp=CAU"
-          description="This is a Narwhal, it is probably cold."
-        />
-        <HornedBeast
-          title="Elk"
-          imgUrl="https://www.treehugger.com/thmb/VqtmKj6rn9nv8W-nuMhW38763Z8=/1839x1379/smart/filters:no_upscale()/GettyImages-636079958-97f257c4c2f74b5592bd7a53b149b613.jpg"
-          description="This is an Elk, it's a magnificent creature!"
-        />
+        {beasts}
       </main>
     )
   }
