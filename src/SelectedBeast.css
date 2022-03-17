@@ -1,0 +1,16 @@
+.modal-header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  background-color: purple;
+  color: white;
+}
+
+.modal-body {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+.modal-body img {
+  width: 800px;
+}
